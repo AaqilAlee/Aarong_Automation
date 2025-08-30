@@ -17,16 +17,14 @@ wait = WebDriverWait(driver, 10)
 
 # Wait until menu is visible (use a stable locator, not li[10])
 
-
 close_btn = WebDriverWait(driver, 5).until(
     EC.element_to_be_clickable((By.XPATH, '/html/body/div/main/div/div/div/div/div/div/button'))
 )
 close_btn.click()
 
-# ok from here
 
 popup_banner = wait.until(EC.presence_of_element_located(
-    (By.XPATH, '//*[@id="headlessui-dialog-:r2a:"]/div/div[2]/div/div[2]')  
+    (By.XPATH, '//*[@id="headlessui-dialog-:r2a:"]/div/div[2]/div/div[2]')
 ))
 popup_banner.click()
 
